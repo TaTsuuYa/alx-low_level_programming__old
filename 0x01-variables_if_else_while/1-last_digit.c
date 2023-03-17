@@ -6,12 +6,12 @@
 int main(void)
 {
 	int n;
+	int lastDigitOfN = n % 10;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	int lastDigitOfN = n % 10;
-
+	
 	if (lastDigitOfN < 0)
 		lastDigitOfN = lastDigitOfN * -1;
 
