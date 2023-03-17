@@ -18,5 +18,6 @@ int main(void)
 		c++;
 	}
 
+	return (0);
 }
 
