@@ -14,7 +14,7 @@ int main(void)
 
 	for (i = 0; i < 26; i++)
 	{
-		if (c != 'q' || c != 'e')
+		if (c != 'q' && c != 'e')
 			putchar(c);
 		c++;
 	}
