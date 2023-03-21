@@ -24,11 +24,11 @@ void jack_bauer(void)
 					_putchar('0' + secs_decimals);
 					_putchar('0' + secs_digits);
 					_putchar('\n');
-					
-					if (mins == 23 && secs == 59)
-						return;
 				}
 			}
+
+			if (mins_decimals == 2 && mins_ddigits == 3)
+				return;
 		}
 	}
 }
