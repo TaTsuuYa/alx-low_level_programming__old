@@ -1,14 +1,12 @@
 #include "_putchar"
 
 /**
- * main - Entry point
- *
- * prints alphabet
+ * print_alphabet - prints the alphabet in lowercase
  *
  * Return: Always 0 (Success)
  */
 
-int main(void)
+int print_alphabet(void)
 {
 	char c = 'a';
 
