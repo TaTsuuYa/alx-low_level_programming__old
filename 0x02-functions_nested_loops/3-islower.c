@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
  * _islower - checks if a character is lowercase
@@ -9,6 +8,15 @@
 
 int _islower(int c)
 {
-	return islower(c);
+	int i;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+
+	for (i = 0; i < 26; i++)
+	{
+		if (c == (char) alphabet[i])
+			return (1);
+	}
+
+	return (0);
 }
 
