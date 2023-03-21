@@ -30,7 +30,7 @@ void times_table(void)
 
 			}
 
-			if (product < 10)
+			if ((a * (b + 1)) < 10)
 			{
 				_putchar(' ');
 			}
