@@ -16,3 +16,5 @@ int _islower(int c);
 /* 4. isalpha */
 int _isalpha(int c);
 
+/* 5. Sign */
+int print_sign(int n);
