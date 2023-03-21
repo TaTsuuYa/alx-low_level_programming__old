@@ -40,3 +40,8 @@ void times_table(void);
 
 /* 10. a + b */
 int add(int a, int b);
+
+
+/* 11. 98 Battery Street, the OG */
+void print_to_98(int n);
+
