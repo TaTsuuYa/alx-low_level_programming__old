@@ -28,3 +28,9 @@ int _abs(int n);
  * it's what we do with them that's important
  */
 int print_last_digit(int n);
+
+
+/* 8. I'm federal agent Jack Bauer,
+ * and today is the longest day of my life
+ */
+void jack_bauer(void);
