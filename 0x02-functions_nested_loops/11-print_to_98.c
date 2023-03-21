@@ -13,6 +13,7 @@ void print_to_98(int n)
 	printf("%d", n);
 
 	if (n == 98)
+		putchar('\n');
 		return;
 	if (n < 98)
 	{
@@ -24,5 +25,7 @@ void print_to_98(int n)
 		printf(", ");
 		print_to_98(--n);
 	}
+
+	putchar('\n');
 }
 
