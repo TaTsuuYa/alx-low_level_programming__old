@@ -23,3 +23,8 @@ int print_sign(int n);
  * You can only estimate what a thing is worth to you
  */
 int _abs(int n);
+
+/* 7. There are only 3 colors, 10 digits, and 7 notes;
+ * it's what we do with them that's important
+ */
+int print_last_digit(int n);
