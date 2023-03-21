@@ -13,7 +13,7 @@ int _isalpha(int c)
 	int i;
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	for (i = 0; i < 26; i++)
+	for (i = 0; i < 52; i++)
 	{
 		if (c == (char) alphabet[i])
 			return (1);
