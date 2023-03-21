@@ -27,7 +27,7 @@ void jack_bauer(void)
 				}
 			}
 
-			if (mins_decimals == 2 && mins_ddigits == 3)
+			if (mins_decimals == 2 && mins_digits == 3)
 				return;
 		}
 	}
