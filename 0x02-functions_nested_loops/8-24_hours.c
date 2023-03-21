@@ -22,7 +22,9 @@ void jack_bauer(void)
 
 			if (secs < 10)
 				_putchar('0');
-			_putchar(secs);
+			_putchar('0' + secs);
+
+			_putchar('\n');
 		}
 
 		if (mins == 23 && secs == 59)
