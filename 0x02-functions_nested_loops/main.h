@@ -18,3 +18,8 @@ int _isalpha(int c);
 
 /* 5. Sign */
 int print_sign(int n);
+
+/* 6. There is no such thing as absolute value in this world.
+ * You can only estimate what a thing is worth to you
+ */
+int _abs(int n);
