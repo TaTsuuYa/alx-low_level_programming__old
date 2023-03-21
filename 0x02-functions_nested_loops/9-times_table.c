@@ -30,7 +30,7 @@ void times_table(void)
 
 			}
 
-			if (product < 9)
+			if (product < 10)
 				_putchar(' ');
 		}
 
