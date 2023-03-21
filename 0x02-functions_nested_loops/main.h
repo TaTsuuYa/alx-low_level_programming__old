@@ -37,3 +37,6 @@ void jack_bauer(void);
 
 /* 9. Learn your times table */
 void times_table(void);
+
+/* 10. a + b */
+int add(int a, int b);
