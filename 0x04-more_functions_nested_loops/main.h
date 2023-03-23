@@ -13,3 +13,6 @@ int mul(int a, int b);
 /* 3. The numbers speak for themselves */
 void print_numbers(void);
 
+/* 4. I believe in numbers and signs */
+void print_most_numbers(void);
+
