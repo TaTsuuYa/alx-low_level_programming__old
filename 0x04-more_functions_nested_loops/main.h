@@ -28,3 +28,6 @@ void print_diagonal(int n);
 /* 8. You are so much sunshine in every square inch */
 void print_square(int size);
 
+/* 10. Triangles */
+void print_triangle(int size);
+
