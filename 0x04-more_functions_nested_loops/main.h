@@ -10,3 +10,6 @@ int _isdigit(int c);
 /* 2. Collaboration is multiplication */
 int mul(int a, int b);
 
+/* 3. The numbers speak for themselves */
+void print_numbers(void);
+
