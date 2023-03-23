@@ -3,7 +3,7 @@
 /**
  * main - Fizz-Buzz
  *
- * Return: Always 1 (Success)
+ * Return: Always 0 (Success)
  */
 
 int main(void)
@@ -21,5 +21,6 @@ int main(void)
 			printf("%d ", i);
 
 	putchar('\n');
+	return (0);
 }
 
