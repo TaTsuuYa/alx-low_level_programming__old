@@ -16,3 +16,6 @@ void print_numbers(void);
 /* 4. I believe in numbers and signs */
 void print_most_numbers(void);
 
+/* 5. Numbers constitute the only universal language */
+void more_numbers(void);
+
