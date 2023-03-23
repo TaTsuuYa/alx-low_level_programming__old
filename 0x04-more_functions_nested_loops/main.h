@@ -25,3 +25,6 @@ void print_line(int n);
 /* 7. I feel like I am diagonally parked in a parallel universe */
 void print_diagonal(int n);
 
+/* 8. You are so much sunshine in every square inch */
+void print_square(int size);
+
