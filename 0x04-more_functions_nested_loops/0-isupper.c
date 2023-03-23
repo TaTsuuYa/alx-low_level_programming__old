@@ -9,7 +9,7 @@
 int _isupper(int c)
 {
 	int i;
-	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	for (i = 0; i < 26; i++)
 	{
