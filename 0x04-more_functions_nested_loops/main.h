@@ -19,3 +19,6 @@ void print_most_numbers(void);
 /* 5. Numbers constitute the only universal language */
 void more_numbers(void);
 
+/* 6. The shortest distance between two points is a straight line */
+void print_line(int n);
+
