@@ -11,7 +11,7 @@ int _isdigit(int c)
 {
 	char ch = (char) c;
 
-	if (c >= 48 && c <= 58)
+	if (ch >= 48 && ch <= 58)
 		return (1);
 
 	return (0);
