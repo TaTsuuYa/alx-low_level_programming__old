@@ -22,3 +22,6 @@ void more_numbers(void);
 /* 6. The shortest distance between two points is a straight line */
 void print_line(int n);
 
+/* 7. I feel like I am diagonally parked in a parallel universe */
+void print_diagonal(int n);
+
