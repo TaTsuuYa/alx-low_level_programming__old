@@ -35,3 +35,7 @@ void puts_half(char *str);
 /* 8. Arrays are not pointers */
 void print_array(int *a, int n);
 
+/* 9. strcpy */
+
+char *_strcpy(char *dest, char *src);
+
