@@ -19,3 +19,10 @@ void _puts(char *str);
 /* 4. I can only go one way. I've not got a reverse gear */
 void print_rev(char *s);
 
+/**
+ * 5. A good engineer thinks in reverse
+ * and asks himself about the stylistic consequences of the components
+ * and systems he proposes
+ */
+void rev_string(char *s);
+
