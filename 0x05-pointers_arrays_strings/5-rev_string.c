@@ -16,7 +16,6 @@ void rev_string(char *s)
 	{}
 
 	printf("len: %d: ", len);
-	len--;
 
 	for (i = 0; i < len / 2; i++)
 	{
