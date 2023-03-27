@@ -16,3 +16,6 @@ int _strlen(char *s);
 /* 3. I do not fear computers. I fear the lack of them */
 void _puts(char *str);
 
+/* 4. I can only go one way. I've not got a reverse gear */
+void print_rev(char *s);
+
