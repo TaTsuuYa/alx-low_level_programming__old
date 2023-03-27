@@ -1,4 +1,4 @@
-#include "mian.h"
+#include "main.h"
 
 /**
  * puts_half - prints secon half of @str
