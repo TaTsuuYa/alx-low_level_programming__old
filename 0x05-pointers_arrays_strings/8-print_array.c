@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_array - print @n elements from @a
  * @a: pointer of an array
@@ -19,7 +19,7 @@ void print_array(int *a, int n)
 		if (i < n - 1)
 			printf(", ");
 		else
-			printf('\n');
+			printf("\n");
 	}
 }
 
