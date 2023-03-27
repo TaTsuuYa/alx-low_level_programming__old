@@ -20,8 +20,8 @@ void rev_string(char *s)
 	for (i = 0; i < len / 2; i++)
 	{
 		ch = s[i];
-		s[i] = s[len - i];
-		s[len - i] = ch;
+		s[i] = s[len - 1 - i];
+		s[len - 1 - i] = ch;
 	}
 }
 
