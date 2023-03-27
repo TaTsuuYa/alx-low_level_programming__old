@@ -32,3 +32,6 @@ void puts2(char *str);
 /* 7. Winning is only half of it. Having fun is the other half */
 void puts_half(char *str);
 
+/* 8. Arrays are not pointers */
+void print_array(int *a, int n);
+
