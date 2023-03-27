@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * puts_half - prints secon half of @str
  * @str: pointer to a string
@@ -13,6 +13,8 @@ void puts_half(char *str)
 
 	for (len = 0; str[len] != '\n'; len++)
 	{}
+
+	printf("len: %d: ", len);
 
 	if (len % 2 == 0)
 		i = len / 2;
