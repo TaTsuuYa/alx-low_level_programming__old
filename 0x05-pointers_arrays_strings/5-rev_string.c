@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * rev_string - reverse @s
  * @s: pointer to a string
@@ -14,8 +14,6 @@ void rev_string(char *s)
 
 	for (len = 0; s[len] != '\0'; len++)
 	{}
-
-	printf("len: %d: ", len);
 
 	for (i = 0; i < len / 2; i++)
 	{
