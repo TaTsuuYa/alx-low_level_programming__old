@@ -10,3 +10,6 @@ void swap_int(int *a, int *b);
  */
 int _strlen(char *s);
 
+/* 3. I do not fear computers. I fear the lack of them */
+void _puts(char *str);
+
