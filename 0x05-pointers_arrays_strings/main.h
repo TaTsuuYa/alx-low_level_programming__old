@@ -26,3 +26,5 @@ void print_rev(char *s);
  */
 void rev_string(char *s);
 
+/* 6. Half the lies they tell about me aren't true */
+void puts2(char *str);
