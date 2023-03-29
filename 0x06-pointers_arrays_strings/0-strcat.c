@@ -5,7 +5,7 @@
  * @dest: points to destination string
  * @src: points to source string
  *
- * Return: char
+ * Return: pointer to @dest
  */
 
 char *_strcat(char *dest, char *src)
@@ -16,13 +16,13 @@ char *_strcat(char *dest, char *src)
 	{
 		if (dest[i] == '\0')
 		{
-			dest[i] = src[i];
+			dest[i] = src;
 			break;
 		}
 
 		i++;
 	}
 
-	return dest;
+	return (dest);
 }
 
