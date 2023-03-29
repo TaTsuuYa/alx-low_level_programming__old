@@ -6,7 +6,7 @@
  * @dest: pointing to string getting copied to
  * @n: max length
  *
- * Return pointer to @dest
+ * Return: pointer to @dest
  */
 
 char *_strncpy(char *dest, char *src, int n)
@@ -23,7 +23,7 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[i] = src[i];
 	}
 
-	dest[i] = '\0';
+	dest[i + 1] = '\0';
 
 	return (dest);
 }
