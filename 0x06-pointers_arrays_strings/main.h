@@ -19,3 +19,6 @@ int _strcmp(char *s1, char *s2);
  */
 void reverse_array(int *a, int n);
 
+/* 5. Always look up */
+char *string_toupper(char *str);
+
