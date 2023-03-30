@@ -9,19 +9,18 @@
 
 char *leet(char *str)
 {
-	int i;
+	int i, j;
+	char alpha_l[] = "aeotl";
+	char alpha_u[] = "AEOTL";
+	char alpha_leet[] = "43071";
 
 	for (i = 0; str[i] != '\0'; i++)
-		if (str[i] == 'a' || str[i] == 'A')
-			str[i] = '4';
-		else if (str[i] == 'e' || str[i] == 'E')
-			str[i] = '3';
-		else if (str[i] == 'o' || str[i] == 'O')
-			str[i] = '0';
-		else if (str[i] == 't' || str[i] == 'T')
-			str[i] = '7';
-		else if (str[i] == 'l' || str[i] == 'L')
-			str[i] = '1';
+		for (j = 0; alpha_l[j] != '\0'; j++)
+			if (str[i] == alpha_l[j] || str[i] == alpha_u[j])
+			{
+				str[i] = alpha_leet[j];
+				break;
+			}
 
 	return (str);
 }
