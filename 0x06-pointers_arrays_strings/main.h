@@ -29,3 +29,9 @@ char *string_toupper(char *str);
  */
 char *cap_string(char *str);
 
+/**
+ * 7. Mozart composed his music not for the elite,
+ * but for everybody
+ */
+char *leet(char *str);
+
