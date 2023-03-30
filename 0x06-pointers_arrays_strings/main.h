@@ -22,3 +22,10 @@ void reverse_array(int *a, int n);
 /* 5. Always look up */
 char *string_toupper(char *str);
 
+/**
+ * 6. Expect the best.
+ * Prepare for the worst.
+ * Capitalize on what comes
+ */
+char *cap_string(char *str);
+
