@@ -15,18 +15,13 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; ; i++)
 	{
+		if (i >= n)
+			return (dest);
+
 		dest[i] = src[i];
 
 		if (src[i] == '\0')
-			break;
-
-		if (i >= n)
 			return (dest);
 	}
-
-	if (i < n)
-		dest[i] = '\0';
-
-	return (dest);
 }
 
