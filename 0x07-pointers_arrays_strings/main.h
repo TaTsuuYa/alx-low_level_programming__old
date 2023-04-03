@@ -13,3 +13,6 @@ char *_strchr(char *s, char c);
 /* 3. strspn */
 unsigned int _strspn(char *s, char *accept);
 
+/* 4. strpbrk */
+char *_strpbrk(char *s, char *accept);
+
