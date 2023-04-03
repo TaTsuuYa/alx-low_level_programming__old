@@ -1,11 +1,12 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strchr - locates @c in @s
  * @s: string looked in
  * @c: characterd looked for
  *
- * Return: address of @c in @s if found, 0 otherwise
+ * Return: address of @c in @s if found, NULL otherwise
  */
 
 char *_strchr(char *s, char c)
@@ -20,6 +21,6 @@ char *_strchr(char *s, char c)
 	if (s[i] == c)
 		return (s + i);
 
-	return (0);
+	return (NULL);
 }
 
