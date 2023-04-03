@@ -16,3 +16,6 @@ unsigned int _strspn(char *s, char *accept);
 /* 4. strpbrk */
 char *_strpbrk(char *s, char *accept);
 
+/* 5. strstr */
+char *_strstr(char *haystack, char *needle);
+
