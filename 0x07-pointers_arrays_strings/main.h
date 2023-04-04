@@ -19,3 +19,6 @@ char *_strpbrk(char *s, char *accept);
 /* 5. strstr */
 char *_strstr(char *haystack, char *needle);
 
+/* 6. Chess is mental torture */
+void print_chessboard(char (*a)[8]);
+
