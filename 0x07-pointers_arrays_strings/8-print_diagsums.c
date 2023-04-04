@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_diagsums - prints the sum of the two diagonal lines
@@ -17,8 +18,8 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		sum1 += a[i][i];
-		sum2 += a[size - i][size - i];
+		sum1 += (a + i)[i];
+		sum2 += (a + (size - i))[size - i];
 	}
 
 	printf("%d, %d", sum1, sum2);
