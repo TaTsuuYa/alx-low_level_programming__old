@@ -11,6 +11,7 @@
 
 char *_strchr(char *s, char c)
 {
+	/*
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
@@ -20,6 +21,15 @@ char *_strchr(char *s, char c)
 	i++;
 	if (s[i] == c)
 		return (s + i);
+
+	return (NULL);
+	*/
+
+	unsigned int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		if (s[i] == c)
+			return (s + i);
 
 	return (NULL);
 }
