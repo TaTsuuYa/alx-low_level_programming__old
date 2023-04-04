@@ -22,3 +22,6 @@ char *_strstr(char *haystack, char *needle);
 /* 6. Chess is mental torture */
 void print_chessboard(char (*a)[8]);
 
+/* 7. The line of life is a ragged diagonal between duty and desire */
+void print_diagsums(int *a, int size);
+
