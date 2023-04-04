@@ -27,6 +27,9 @@ char *_strchr(char *s, char c)
 
 	unsigned int i;
 
+	if (s[0] == '\0' || c == '\0')
+		return (NULL);
+
 	for (i = 0; s[i] != '\0'; i++)
 		if (s[i] == c)
 			return (s + i);
