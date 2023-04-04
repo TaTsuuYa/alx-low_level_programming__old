@@ -5,6 +5,7 @@
  * print_diagsums - prints the sum of the two diagonal lines
  * of the 2D array @a
  * @a: a pointer to the 2D array
+ * @size: size of @a
  *
  * Return: void
  */
@@ -21,6 +22,6 @@ void print_diagsums(int *a, int size)
 		sum2 += (a + (size - i))[size - i];
 	}
 
-	printf("%d, %d", sum1, sum2);
+	printf("%d, %d\n", sum1, sum2);
 }
 
