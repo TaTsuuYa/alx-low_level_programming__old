@@ -34,3 +34,6 @@ int factorial(int n);
  */
 int _pow_recursion(int x, int y);
 
+/* 5. Your subconscious is looking for the dreamer */
+int _sqrt_recursion(int n);
+
