@@ -22,3 +22,9 @@ void _print_rev_recursion(char *s);
  */
 int _strlen_recursion(char *s);
 
+/**
+ * 3. You mustn't be afraid to dream a little bigger,
+ * darling
+ */
+int factorial(int n);
+
