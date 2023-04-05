@@ -9,3 +9,9 @@ int _putchar(char c);
  */
 void _puts_recursion(char *s);
 
+/* *
+ * 1. Why is it so important to dream? Because,
+ * in my dreams we are together
+ */
+void _print_rev_recursion(char *s);
+
