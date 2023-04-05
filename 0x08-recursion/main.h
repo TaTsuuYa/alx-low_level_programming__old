@@ -28,3 +28,9 @@ int _strlen_recursion(char *s);
  */
 int factorial(int n);
 
+/**
+ * 4. Once an idea has taken hold of the brain
+ * it's almost impossible to eradicate
+ */
+int _pow_recursion(int x, int y);
+
