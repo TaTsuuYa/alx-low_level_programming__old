@@ -9,16 +9,25 @@
 
 int _sqrt_recursion(int n)
 {
-	int sqrt;
+	return (sqrt_helper(n, 1));
+}
 
-	if (n == 1)
-		return (1);
+/**
+ * sqrt_helper - a helper fonction for _sqrt_recurtion
+ * @n: the number's sqrt calculated
+ * @i: counter
+ *
+ * Return: int sqrt of @n
+ */
 
-	sqrt = _sqrt_recursion(n - 1) - 1;
+int sqrt_helper(int n, int i)
+{
+	if (i * i == n)
+		return (i);
 
-	if (sqrt * sqrt < n)
+	if (i * i > n)
 		return (-1);
 
-	return (sqrt);
+	return (sqrt_helper(n, i + 1));
 }
 
