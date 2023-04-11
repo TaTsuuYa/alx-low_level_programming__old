@@ -13,5 +13,11 @@ char *_strdup(char *str);
  */
 char *str_concat(char *s1, char *s2);
 
+/**
+ * 3. If you even dream of beating me 
+ * ou'd better wake up and apologize
+ */
+int **alloc_grid(int width, int height);
+
 #endif
 
