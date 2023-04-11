@@ -14,6 +14,12 @@ char *str_concat(char *s1, char *s2)
 	unsigned int size1, size2, i;
 	char *s;
 
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
 	for (size1 = 0; s1[size1] != 0; size1++)
 	{}
 
