@@ -28,8 +28,8 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i < size1; i++)
 		s[i] = s1[i];
 
-	for (; i < size1 + size2; i++)
-		s[i] = s2[size1 + i];
+	for (i = 0; i < size2; i++)
+		s[size1 + i] = s2[i];
 
 	s[i + 1] = '\0';
 
