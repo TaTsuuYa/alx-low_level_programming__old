@@ -19,5 +19,8 @@ char *str_concat(char *s1, char *s2);
  */
 int **alloc_grid(int width, int height);
 
+/* 4. It's not bragging if you can back it up */
+void free_grid(int **grid, int height);
+
 #endif
 
