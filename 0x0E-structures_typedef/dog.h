@@ -29,7 +29,7 @@ void print_dog(struct dog *d);
 /**
  * dog_t - type of struct dog
  */
-typedef struct dog dog_t
+typedef struct dog dog_t;
 
 #endif
 
