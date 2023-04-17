@@ -15,7 +15,8 @@ struct dog
 	char *owner;
 };
 
-/* 1. A dog is the only thing on earth
+/**
+ * 1. A dog is the only thing on earth
  * that loves you more than you love yourself
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
