@@ -16,8 +16,11 @@ struct dog
 };
 
 /**
- * 1. A dog is the only thing on earth
- * that loves you more than you love yourself
+ * init_dog - initialize a struct dog
+ * @d: pointer to struct dog
+ * @name: pointer to string name of dog
+ * @age: age of dog
+ * @owner: pointer to string name of owner
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
