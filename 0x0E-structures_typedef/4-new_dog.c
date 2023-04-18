@@ -9,10 +9,16 @@
  * Return: pointer to dog
  */
 
+dog_t d;
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t d = {name, age, owner};
+	dog_t *dog = &d;
 
-	return (d);
+	dog->name = name;
+	dog->age = age;
+	dog->owner = owner;
+
+	return (dog);
 }
 
