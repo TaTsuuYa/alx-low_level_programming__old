@@ -23,30 +23,18 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	num1 = atoi(argv[1]);
-	operator = argv[2];
-	num2 = atoi(argv[3]);
-
-	if (
-		operator[0] != '+' ||
-		operator[0] != '-' ||
-		operator[0] != '*' ||
-		operator[0] != '/' ||
-		operator[0] != '%'
-	)
+	f = get_op_func(argv[2]);
+	if (f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if ((operator[0] == '/' || operator[0] == '%') && num2 == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
 
-	f = get_op_func(operator);
-	res = f(num1, num2);
-	return (res);
+	printf("%d", f(num1, num2));
+
+	return (0);
 }
 
