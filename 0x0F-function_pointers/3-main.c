@@ -13,7 +13,6 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2;
-	char *operator;
 	int (*f)(int, int);
 
 	if (argc != 4)
