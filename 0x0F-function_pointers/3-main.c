@@ -10,10 +10,12 @@
  * Return: 0 success, int otherwise
  */
 
-int main(int argc, char *argvi[])
+int main(int argc, char *argv[])
 {
 	int num1, num2;
-	char operator[];
+	char *operator;
+	int (*f)(int, int);
+	int res;
 
 	if (argc != 4)
 	{
@@ -26,23 +28,25 @@ int main(int argc, char *argvi[])
 	num2 = atoi(argv[3]);
 
 	if (
-		operator != "+" ||
-		operator != "-" ||
-		operator != "*" ||
-		operator != "/" ||
-		operator != "%"
+		operator[0] != '+' ||
+		operator[0] != '-' ||
+		operator[0] != '*' ||
+		operator[0] != '/' ||
+		operator[0] != '%'
 	)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if ((perator == "/" || operator == "%") && num2 == 0)
+	if ((operator[0] == '/' || operator[0] == '%') && num2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	return (get_op_func(operator)(num1, num2));
+	f = get_op_func(operator);
+	res = f(num1, num2);
+	return (res);
 }
 

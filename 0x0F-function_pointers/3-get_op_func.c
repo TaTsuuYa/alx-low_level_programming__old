@@ -8,7 +8,7 @@
  * Return: pointer to the rigth function
  */
 
-int (*get_op_func(char *s))(int, int);
+int (*get_op_func(char *s))(int, int)
 {
 	int i = 0;
 	op_t ops[] = {
@@ -21,7 +21,7 @@ int (*get_op_func(char *s))(int, int);
 	};
 
 	while (i < 6)
-		if (s[0] == ops[i].op)
+		if (s == ops[i].op)
 			return (ops[i].f);
 
 	return (NULL);
