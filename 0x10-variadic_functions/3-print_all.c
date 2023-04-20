@@ -25,16 +25,19 @@ void print_all(const char * const format, ...)
 			case 'c':
 			{
 				printf("%c", va_arg(args, int));
+				print_sep(i, n);
 				break;
 			}
 			case 'i':
 			{
 				printf("%d", va_arg(args, int));
+				print_sep(i, n);
 				break;
 			}
 			case 'f':
 			{
 				printf("%f", va_arg(args, double));
+				print_sep(i, n);
 				break;
 			}
 			case 's':
@@ -43,19 +46,14 @@ void print_all(const char * const format, ...)
 				if (s == NULL)
 				{
 					printf("(nil)");
+					print_sep(i, n);
 					break;
 				}
 				printf("%s", va_arg(args, char *));
-				break;
-			}
-			default:
-			{
+				print_sep(i, n);
 				break;
 			}
 		}
-
-		if (i < (n - 1))
-		printf(", ");
 
 		i++;
 	}
@@ -64,3 +62,8 @@ void print_all(const char * const format, ...)
 	printf("\n");
 }
 
+void print_sep(size_t i, size_t n)
+{
+	if (i < (n - 1))
+		printf(", ");
+}
