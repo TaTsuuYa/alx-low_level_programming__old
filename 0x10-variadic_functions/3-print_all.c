@@ -49,7 +49,7 @@ void print_all(const char * const format, ...)
 					print_sep(i, n);
 					break;
 				}
-				printf("%s", va_arg(args, char *));
+				printf("%s", s);
 				print_sep(i, n);
 				break;
 			}
