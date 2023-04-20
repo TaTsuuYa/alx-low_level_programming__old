@@ -15,9 +15,7 @@ void print_all(const char * const format, ...)
 	size_t i = 0, n = strlen(format);
 	char *s;
 
-
 	va_start(args, format);
-
 	while (format != NULL && i < n)
 	{
 		switch (format[i])
@@ -48,13 +46,19 @@ void print_all(const char * const format, ...)
 				break;
 			}
 		}
-
 		i++;
 	}
 	va_end(args);
-
 	printf("\n");
 }
+
+/**
+ * print_sep - prints separator if needed
+ * @i: current index
+ * @n: length
+ *
+ * Return: void
+ */
 
 void print_sep(size_t i, size_t n)
 {
@@ -62,10 +66,17 @@ void print_sep(size_t i, size_t n)
 		printf(", ");
 }
 
+/**
+ * choose_str - chooses the right string
+ * @s: pointer to string
+ *
+ * Return: "(nil)" if @s is NULL, @s otherwise
+ */
+
 char *choose_str(char *s)
 {
 	if (s == NULL)
-		return ("nil");
+		return ("(nil)");
 
 	return (s);
 }
