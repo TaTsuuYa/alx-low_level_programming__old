@@ -43,13 +43,7 @@ void print_all(const char * const format, ...)
 			case 's':
 			{
 				s = va_arg(args, char *);
-				if (s == NULL)
-				{
-					printf("(nil)");
-					print_sep(i, n);
-					break;
-				}
-				printf("%s", s);
+				printf("%s", choose_str(s));
 				print_sep(i, n);
 				break;
 			}
@@ -66,4 +60,12 @@ void print_sep(size_t i, size_t n)
 {
 	if (i < (n - 1))
 		printf(", ");
+}
+
+char *choose_str(char *s)
+{
+	if (s == NULL)
+		return ("nil");
+
+	return (s);
 }
