@@ -59,10 +59,10 @@ void print_sep(size_t i, size_t n)
 }
 
 /**
- * choose_str - chooses the right string
+ * print_str - prints the right string
  * @s: pointer to string
  *
- * Return: "(nil)" if @s is NULL, @s otherwise
+ * Return: void
  */
 
 void print_str(char *s)
