@@ -21,30 +21,22 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-			{
 				printf("%c", va_arg(args, int));
 				print_sep(i, n);
 				break;
-			}
 			case 'i':
-			{
 				printf("%d", va_arg(args, int));
 				print_sep(i, n);
 				break;
-			}
 			case 'f':
-			{
 				printf("%f", va_arg(args, double));
 				print_sep(i, n);
 				break;
-			}
 			case 's':
-			{
 				s = va_arg(args, char *);
-				printf("%s", choose_str(s));
+				print_str(s);
 				print_sep(i, n);
 				break;
-			}
 		}
 		i++;
 	}
@@ -73,10 +65,14 @@ void print_sep(size_t i, size_t n)
  * Return: "(nil)" if @s is NULL, @s otherwise
  */
 
-char *choose_str(char *s)
+void print_str(char *s)
 {
 	if (s == NULL)
-		return ("(nil)");
+	{
+		printf("(nil)");
+		return;
+	}
 
-	return (s);
+	printf("%s", s);
 }
+
