@@ -13,9 +13,9 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 
 /* 3. To be is a to be the value of a variable */
-void print_all(const char * const format, ...);
 void print_sep(size_t i, size_t n);
 void print_str(char *s);
+void print_all(const char * const format, ...);
 
 #endif /* ifndef VARIADIC_FUNCTIONS_H */
 
