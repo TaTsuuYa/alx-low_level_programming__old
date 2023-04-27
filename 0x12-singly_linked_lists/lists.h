@@ -29,5 +29,8 @@ size_t list_len(const list_t *h);
 /* 2. Add node */
 list_t *add_node(list_t **head, const char *str);
 
+/* 3. Add node at the end */
+list_t *add_node_end(list_t **head, const char *str);
+
 #endif /* #ifndef LISTS_H */
 
