@@ -31,17 +31,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (new_node);
 	}
 
-	while (1)
-	{
-		if ((*head)->next == NULL)
-		{
-
-			(*head)->next = new_node;
-			break;
-		}
-
+	while ((*head)->next != NULL)
 		*head = (*head)->next;
-	}
+
+	(*head)->next = new_node;
 
 	return (new_node);
 }
