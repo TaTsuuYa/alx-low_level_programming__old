@@ -4,7 +4,7 @@
  * sum_listint - sums the data of a listint_t
  * @head: pointer to the first eleent
  *
- * Retuen: sum of a listint_t
+ * Return: sum of a listint_t
  */
 
 int sum_listint(listint_t *head)
