@@ -1,8 +1,5 @@
 #include "lists.h"
 
-listint_t *add_nodeint(listint_t **head, const int n);
-listint_t *add_nodeint_end(listint_t **head, const int n);
-
 /**
  * insert_nodeint_at_index - inserts a listint_t at @idx
  * @head: pointer to the address of first node
@@ -37,56 +34,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->next = temp->next;
 	temp->next = new_node;
 
-	return (new_node);
-}
-
-/**
- * add_nodeint - adds a node to the beginning
- * @head: pointer to address of forst element
- * @n: value of node
- *
- * Return: pointer to new list, NULL otheriwse
- */
-
-listint_t *add_nodeint(listint_t **head, const int n)
-{
-	listint_t *new_node;
-
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->n = n;
-	new_node->next = *head;
-	*head = new_node;
-	return (new_node);
-}
-
-/**
- * add_nodeint_end - add a node to the end
- * @head: pointer to the address of first element
- * @n: value of the struct listint_t
- *
- * Return: address of the new element, NULL otherwise
- */
-
-listint_t *add_nodeint_end(listint_t **head, const int n)
-{
-	listint_t *new_node, *temp;
-
-	new_node = malloc(sizeof(listint_t));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->n = n;
-	new_node->next = NULL;
-	if (*head == NULL)
-	{
-		*head = new_node;
-		return (new_node);
-	}
-	temp = *head;
-	while (temp->next != NULL)
-		temp = temp->next;
-	temp->next = new_node;
 	return (new_node);
 }
 
