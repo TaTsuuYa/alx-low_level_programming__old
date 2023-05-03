@@ -5,6 +5,8 @@
  * @head: pointer to the address of first node
  * @idx: insert position
  * @n: data;
+ *
+ * Return: address of inserted node
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
