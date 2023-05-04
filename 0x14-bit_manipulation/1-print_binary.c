@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 {
 	if (n == 0)
 	{
-		printf("0");
+		_putchar('0');
 		return;
 	}
 
@@ -34,5 +34,5 @@ void print_binary_recursion(unsigned long int n)
 		return;
 
 	print_binary_recursion(n >> 1);
-	printf("%ld", n & 1);
+	_putchar('0' + (n & 1));
 }
