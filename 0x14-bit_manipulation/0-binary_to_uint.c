@@ -16,10 +16,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 1; i <= len; i++)
 		if (b[len - i] == '1')
-			if (len - i > max)
-				return (0);
-			else
-				result += 1 << (i - 1);
+			result += 1 << (i - 1);
 		else if (b[len - i] != '0')
 			return (0);
 
