@@ -19,9 +19,12 @@ int create_file(const char *filename, char *text_content)
 	if (f < 0)
 		return (-1);
 
-	p = dprintf(f, "%s", text_content);
-	if (p < 0)
-		return (-1);
+	if (text_constent != NULL)
+	{
+		p = dprintf(f, "%s", text_content);
+		if (p < 0)
+			return (-1);
+	}
 
 	close(f);
 
