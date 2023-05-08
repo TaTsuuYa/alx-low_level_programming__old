@@ -18,7 +18,7 @@ void handle_closing(int f);
 
 int main(int argc, char **argv)
 {
-	int ffrom, fto, cfrom, cto;
+	int ffrom, fto;
 	ssize_t r = BUFFER_SIZE, w;
 	char buf[BUFFER_SIZE];
 
@@ -48,12 +48,12 @@ int main(int argc, char **argv)
 		if (w < 0)
 		{
 			printf("Error: Can't write to %s\n", argv[2]);
-			exit(99)
+			exit(99);
 		}
 	}
 
-	handle_closing(ffrom)
-	handle_closing(fto)
+	handle_closing(ffrom);
+	handle_closing(fto);
 
 	return (0);
 }
@@ -70,7 +70,7 @@ void handle_closing(int f)
 	c = close(f);
 	if (c < 0)
 	{
-		printf("Error: Can't close fd %d\n", fto);
+		printf("Error: Can't close fd %d\n", f);
 		exit(100);
 	}
 }
