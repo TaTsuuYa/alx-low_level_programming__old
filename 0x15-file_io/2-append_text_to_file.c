@@ -21,7 +21,10 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	a = dprintf(f, "%s\n", text_content);
 	if (a < 0)
+	{
+		close(f);
 		return (-1);
+	}
 
 	close(f);
 
