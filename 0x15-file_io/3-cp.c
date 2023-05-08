@@ -23,41 +23,35 @@ int main(int argc, char **argv)
 		printf("Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	ffrom = open(argv[1], O_RDONLY);
 	if (ffrom < 0)
 	{
 		printf("Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-
 	fto = open(argv[2], O_WRONLY | O_CREAT, 0664);
 	if (fto < 0)
 	{
 		printf("Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
 	while (r >= BUFFER_SIZE)
 	{
 		r = read(ffrom, buf, BUFFER_SIZE);
 		write(fto, buf, r);
 	}
-
 	cfrom = close(ffrom);
 	if (cfrom < 0)
 	{
 		printf("Error: Can't close fd %d\n", ffrom);
 		exit(100);
 	}
-
 	cto = close(fto);
 	if (cto < 0)
 	{
 		printf("Error: Can't close fd %d\n", fto);
 		exit(100);
 	}
-
 	return (0);
 }
 
