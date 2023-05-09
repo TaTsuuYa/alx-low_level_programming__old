@@ -8,6 +8,7 @@
 
 /* prototypes */
 void handle_closing(int f);
+void handle_stderr(char *msg, char *f, int ex);
 
 /**
  * main - copies file content to another file
@@ -24,46 +25,25 @@ int main(int argc, char **argv)
 	char buf[BUFFER_SIZE];
 
 	if (argc != 3)
-	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to\n", strlen("Usage: cp file_from file_to\n"));
-		exit(97);
-	}
+		handle_stderr("Usage: cp file_from file_to", NULL, 97);
 
 	ffrom = open(argv[1], O_RDONLY);
 	if (ffrom < 0)
-	{
-		write(STDERR_FILENO, "Error: Can't read from file ", strlen("Error: Can't read from file "));
-		write(STDERR_FILENO, argv[1], strlen(argv[1]));
-		write(STDERR_FILENO, "\n", 1);
-		exit(98);
-	}
+		handle_stderr("Error: Can't read from file ", argv[1], 98);
+
 	fto = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fto < 0)
-	{
-		write(STDERR_FILENO, "Error: Can't write to ", strlen("Error: Can't write to "));
-		write(STDERR_FILENO, argv[2], strlen(argv[2]));
-		write(STDERR_FILENO, "\n", 1);
-		exit(99);
-	}
+		handle_stderr("Error: Can't write to ", argv[2], 99);
 
 	while (r >= BUFFER_SIZE)
 	{
 		r = read(ffrom, buf, BUFFER_SIZE);
 		if (r < 0)
-		{
-			write(STDERR_FILENO, "Can't read from file ", strlen("Can't read from file "));
-			write(STDERR_FILENO, argv[1], strlen(argv[1]));
-			write(STDERR_FILENO, "\n", 1);
-			exit(98);
-		}
+			handle_stderr("Can't read from file ", argv[1], 98);
+
 		w = write(fto, buf, r);
 		if (w < 0)
-		{
-			write(STDERR_FILENO, "Error: Can't write to ", strlen("Error: Can't write to "));
-			write(STDERR_FILENO, argv[2], strlen(argv[2]));
-			write(STDERR_FILENO, "\n", 1);
-			exit(99);
-		}
+			handle_stderr("Error: Can't write to ", argv[2], 99);
 	}
 
 	handle_closing(ffrom);
@@ -88,12 +68,24 @@ void handle_closing(int f)
 		str = malloc(sizeof(int) + 1);
 		sprintf(str, "%d", f);
 
-		write(STDERR_FILENO, "Error: Can't close fd ", strlen("Error: Can't close fd "));
-		write(STDERR_FILENO, str, strlen(str));
-		write(STDERR_FILENO, "\n", 1);
-
-		free(str);
-		exit(100);
+		handle_stderr("Error: Can't close fd ", str, 100);
 	}
+}
+
+/**
+ * handle_stderr - prints errors
+ * @msg: error message
+ * @f: file info
+ * @ex: exit code
+ */
+
+void handle_stderr(char *msg, char *f, int ex)
+{
+	write(STDERR_FILENO, msg, strlen(msg));
+	if (f != NULL)
+		write(STDERR_FILENO, f, strlen(f));
+	write(STDERR_FILENO, "\n", 1);
+
+	exit(ex);
 }
 
