@@ -49,6 +49,13 @@ int main(int argc, char **argv)
 	while (r >= BUFFER_SIZE)
 	{
 		r = read(ffrom, buf, BUFFER_SIZE);
+		if (r < 0)
+		{
+			write(STDERR_FILENO, "Can't read from file ", strlen("Can't read from file "));
+			write(STDERR_FILENO, argv[1], strlen(argv[1]));
+			write(STDERR_FILENO, "\n", 1);
+			exit(98);
+		}
 		w = write(fto, buf, r);
 		if (w < 0)
 		{
