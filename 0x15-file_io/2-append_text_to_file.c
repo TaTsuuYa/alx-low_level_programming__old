@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * append_text_to_file - appends text to file
@@ -22,7 +23,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (text_content == NULL)
 		return (1);
 
-	a = dprintf(f, "%s\n", text_content);
+	a = write(f, text_content, strlen(text_content));
 	if (a < 0)
 	{
 		close(f);
