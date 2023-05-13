@@ -39,7 +39,7 @@ int main(int argc, char **argv)
 	{
 		r = read(ffrom, buf, BUFFER_SIZE);
 		if (r < 0)
-			handle_stderr("Can't read from file ", argv[1], 98);
+			handle_stderr("Error: Can't read from file ", argv[1], 98);
 
 		w = write(fto, buf, r);
 		if (w < 0)
