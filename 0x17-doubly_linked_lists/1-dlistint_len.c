@@ -13,7 +13,7 @@ size_t dlistint_len(const dlistint_t *h)
 	const dlistint_t *current;
 
 	if (h == NULL)
-	    return (0);
+		return (0);
 
 	current = h;
 	while (current)
