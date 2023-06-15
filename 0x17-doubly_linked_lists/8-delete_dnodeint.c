@@ -2,9 +2,9 @@
 
 /**
  * delete_dnodeint_at_index - deletes a node at @index
- * 
  * @head: head
  * @index: index
+ *
  * Return: 1 if success, -1 otherwise
  */
 
@@ -38,8 +38,5 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		current = current->next;
 	}
 
-	prev = current->prev;
-	prev->next = NULL;
-	free(current);
-	return (1);
+	return (-1);
 }
