@@ -4,7 +4,7 @@
 /**
  * print_dlistint - prints elements of list
  * @h: heater of the list
- * 
+ *
  * Return: number of elements
  */
 
