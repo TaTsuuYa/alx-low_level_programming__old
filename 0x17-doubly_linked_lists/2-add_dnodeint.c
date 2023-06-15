@@ -3,6 +3,7 @@
 /**
  * add_dnodeint - add node at beginning
  * @head: head
+ * @n: data
  *
  * Return: new node
  */
@@ -24,5 +25,5 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	*head = new;
 
-	return(new);
+	return (new);
 }
