@@ -4,7 +4,7 @@
  * sum_dlistint - calculates the sum of node's data
  * @head: head
  *
- * Return: sum of nodes' data 
+ * Return: sum of nodes' data
  */
 int sum_dlistint(dlistint_t *head)
 {
