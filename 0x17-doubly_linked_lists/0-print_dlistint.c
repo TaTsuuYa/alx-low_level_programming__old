@@ -11,7 +11,7 @@
 size_t print_dlistint(const dlistint_t *h)
 {
     size_t size = 0;
-    dlistint_t *current;
+    const dlistint_t *current;
 
     if (h == NULL)
         return (0);
