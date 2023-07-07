@@ -37,4 +37,7 @@ typedef struct hash_table_s
 /* 0. >>> ht = {} */
 hash_table_t *hash_table_create(unsigned long int size);
 
+/* 1. djb2 */
+unsigned long int hash_djb2(const unsigned char *str);
+
 #endif /* #ifndef HASH_TABLES_H */
