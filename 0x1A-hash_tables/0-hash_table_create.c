@@ -11,14 +11,18 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *htt;
 	hash_node_t *arr;
+	int i;
 
-	htt = malloc(sizeof(hash_table_t *) * size);
+	htt = malloc(sizeof(hash_table_t) * size);
 	if (htt == NULL)
 		return (NULL);
 
 	arr = malloc(sizeof(hash_node_t *) * size);
 	if (arr == NULL)
 		return (NULL);
+
+	for (i = 0; i < size; i++)
+		htt->array[i] = NULL;
 
 	htt->size = size;
 	htt->array = &arr;
