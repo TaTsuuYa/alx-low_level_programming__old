@@ -47,4 +47,7 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /* 3. >>> ht['betty'] = 'cool' */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
+/* 4. >>> ht['betty'] */
+char *hash_table_get(const hash_table_t *ht, const char *key);
+
 #endif /* #ifndef HASH_TABLES_H */
