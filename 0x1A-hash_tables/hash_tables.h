@@ -33,6 +33,7 @@ typedef struct hash_table_s
 /* includes */
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /* prototypes */
 /* 0. >>> ht = {} */
@@ -50,4 +51,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 /* 4. >>> ht['betty'] */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 
-#endif /* #ifndef HASH_TABLES_H */
+/* 5. >>> print(ht) */
+void hash_table_print(const hash_table_t *ht);
+void print_el(hash_node_t *el);
+
+#endif /* ifndef HASH_TABLES_H */
