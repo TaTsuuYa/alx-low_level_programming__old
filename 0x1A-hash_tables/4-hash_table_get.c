@@ -17,17 +17,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		return (NULL);
 
 	ind = key_index((const unsigned char *)key, ht->size);
-	if (ind >= ht->size)
-		return (NULL);
+	node = (ht->array)[ind];
 
-	if (ind >= ht->size)
-		return (NULL);
+	while (node)
+	{
+		if (strcmp(node->key, (char *)key) != 0)
+			return (node->value);
+		node = node->next;
+	}
 
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
-		return (NULL);
-
-	if (node == NULL)
-		return (NULL);
-	return (node->value);
+	return (NULL);
 }
