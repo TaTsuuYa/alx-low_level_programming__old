@@ -32,6 +32,7 @@ typedef struct hash_table_s
 
 /* includes */
 #include <stdlib.h>
+#include <string.h>
 
 /* prototypes */
 /* 0. >>> ht = {} */
@@ -42,5 +43,8 @@ unsigned long int hash_djb2(const unsigned char *str);
 
 /* 2. key -> index */
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
+/* 3. >>> ht['betty'] = 'cool' */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
 #endif /* #ifndef HASH_TABLES_H */
