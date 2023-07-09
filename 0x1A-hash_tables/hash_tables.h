@@ -55,4 +55,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void print_el(hash_node_t *el);
 
+/* 6. >>> del ht */
+void hash_table_delete(hash_table_t *ht);
+
 #endif /* ifndef HASH_TABLES_H */
